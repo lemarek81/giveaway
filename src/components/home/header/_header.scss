@@ -1,0 +1,92 @@
+@import '../../../scss/settings/colors';
+@import '../../../scss/settings/fonts';
+@import '../../../scss/settings/mainStyles';
+
+.headerSection {
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:20px;
+
+    .headerSectionMainSection {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .headerLeft{
+            display: flex;
+            width: 50%;
+            background-image: url('../../../assets/Home-Hero-Image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 60vh;
+            max-height: 963px;
+            background-position: right;
+        }
+        .headerRight {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        
+            .menuWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items:flex-end;
+                justify-content: space-between;
+                width: 100%;        
+                .menuTop{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items:center;
+
+                    .User{
+                        color: $colorDarkGrey;
+                        margin-right: 10px;
+                    }
+                }
+                .menuMain{
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    align-items:flex-end;
+                    justify-content: space-between;
+                }
+        
+            }
+            
+            .hederRightContent{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h1{
+                    text-align: center;
+                    line-height: 1.5;
+                    
+                }
+
+                img {
+                    margin: 30px;
+                }
+
+                .buttonWrapper{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

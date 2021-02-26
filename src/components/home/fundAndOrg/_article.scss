@@ -1,0 +1,72 @@
+@import '../../../scss/settings/fonts';
+@import '../../../scss/settings/colors'; 
+
+
+.articleSectionCollection,
+.articleSectionOrganization,
+.articleSectionFundation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 80px;
+
+.articleIntro{
+    display: flex;
+    width: 50%;
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+}
+.articleWrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    // justify-content: space-between;
+    // align-items: flex-start;
+    border-bottom: 1px solid $colorDarkDarkGrey;   
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    .articleLeft{
+        display: flex;
+        flex-direction: column;   
+        width:70%; 
+        
+        .articleTitle{
+            font-size: large;
+            color: $colorDarkDarkGrey;
+            margin-bottom: 10px;
+            font-size: 26px;
+            font-weight: normal;
+
+        }
+        .articleShortage{
+            font-size: normal;
+            font-style: italic;
+            color: $colorDarkDarkGrey;
+            font-size: 18px;
+            font-weight: normal;
+
+        }
+    }
+    .articleRight{
+        display: flex; 
+        width:30%; 
+        justify-content: flex-end;
+        align-items: center;
+
+
+        .articleTags{
+            font-size: normal;
+            color: $colorDarkDarkGrey;
+            font-size: 18px;
+            font-weight: normal;
+            
+        }
+    }
+}
+} 

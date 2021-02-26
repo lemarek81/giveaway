@@ -1,0 +1,18 @@
+
+@import '../../../scss/settings/fonts.scss';
+@import '../../../scss/settings/colors.scss';
+@import '../../../scss/settings/mainStyles.scss';
+@import '../../../scss/main.scss';
+
+.navbar {
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+     ul {
+        display: flex;
+        width:100%;  
+        }
+    }

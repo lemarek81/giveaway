@@ -1,0 +1,15 @@
+@import './scss/main.scss';
+@import './scss/settings/_colors';
+@import './scss/settings/_fonts';
+@import './scss/settings/_mainStyles';
+
+
+.AppContainer {
+    display: flex;
+    width: 1900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
