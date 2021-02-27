@@ -1,0 +1,33 @@
+//zaimportowa  pliki fonts.sccc i colors.scss tutaj. oraz fonty GGOgle Fonts.
+// ustalić "body - powinnow mieć ustalonw font -family na $font-base
+
+@import 'node_modules/reset-css/sass/_reset.scss';
+@import './settings/_fonts';
+@import './settings/_colors';
+@import './settings/_mainStyles';
+
+
+body {
+    font-family: $fontBase;
+    font-weight: normal;
+    background-color: white;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    h1 {
+    color: $colorDarkDarkGrey;
+    font-size: 38px;
+    }
+
+    h2 {
+      color: $colorDarkDarkGrey;
+      font-size: 24px;
+      }
+
+      h3 {
+        color: $colorDarkDarkGrey;
+        font-size: 18px;
+        }
+}

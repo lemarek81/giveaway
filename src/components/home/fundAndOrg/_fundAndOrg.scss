@@ -1,0 +1,41 @@
+@import '../../../scss/settings/fonts';
+@import '../../../scss/settings/colors';  
+
+
+.fundAndOrgSection{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+
+    h1{
+        text-align: center;
+        line-height: 1.5;
+            
+    }
+
+    img {
+        margin: 30px;
+    }
+
+   
+    .fundAndOrgMainSection{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        
+        .buttonWrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+    
+        }
+    }
+    
+}
