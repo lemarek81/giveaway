@@ -1,16 +1,27 @@
-import React from 'react'
+import React , {useState} from 'react'
 import './_contact.scss'
 import ContactForm from './_contactForm';
 import Footer from '../footer/_footer';
+import ContactFormSuccess from './_contactFormSuccess';
 
-export default function contact() {
+const Contact = () => {
+    const [fromIsSubmitted, setFromIsSubmitted] = useState(false);
+  
+    function submitForm() {
+        setFromIsSubmitted(true);
+    }
+
     return (
         <div  className='contactSection' id='contact'>
 
         <div className='contactSectionWrapper'>
             <div className='contactLeft'> </div>
             <div className='contactRight'>
-            <ContactForm></ContactForm>   
+            {!fromIsSubmitted ? (
+          <ContactForm submitForm={submitForm} />
+        ) : (
+          <ContactFormSuccess />
+        )} 
             </div>
         </div>
         <div className='contactFooter'>
@@ -20,3 +31,4 @@ export default function contact() {
     
     )
 }
+export default Contact;

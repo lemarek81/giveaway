@@ -6,7 +6,8 @@ const Sizes= ['buttonBig', 'buttonMedium', 'buttonSmall', 'buttonNav', 'buttonSe
 
 const ButtonFunction = ({
     children,
-    buttonSize
+    buttonSize,
+    
 }) => {   
         const checkButtonSize = Sizes.includes(buttonSize)
         ? buttonSize

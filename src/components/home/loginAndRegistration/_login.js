@@ -1,4 +1,5 @@
 import React from 'react';
+import {useState} from 'react';
 import './_register.scss';
 import Navigation from '../header/_navbar';
 import Decoration from '../../../assets/Decoration.svg';
@@ -6,7 +7,11 @@ import ButtonFunction from '../_buttons.js';
 import '../_buttons.scss';
 import {Link} from 'react-router-dom';
 
-export default function login() {
+
+function Login() {
+   
+    const [toggled, toggle] = useState(true);
+
     return (
         
         <div className='registerContainer'>
@@ -48,13 +53,14 @@ export default function login() {
               </li>
               <li>
                 <div className='menuMain'>
+                <button onClick={()=> toggle(toggled => !toggled)}> test button </button>
                     <Navigation></Navigation>
                 </div>
               </li>
             </ul>
           </div>
           <div>
-        <div className='registerForm'>
+        <div className='registerForm'>{toggled && <>
             <h1>Załóż konto</h1>
             <img
                 src={Decoration}>
@@ -99,17 +105,20 @@ export default function login() {
                         </div>
                 </form>
                 <div className='logingButtonsWrapper'>
-                    <ButtonFunction
+                    <ButtonFunction 
                     type='submit'
                     buttonSize='buttonSend'
-                    id='formSubmitLogin'>Zaloguj się</ButtonFunction>
+                    id='formSubmitLogin'
+                    >Zaloguj się</ButtonFunction>
+    
                     <ButtonFunction
                     type='submit'
                     buttonSize='buttonSend'
                     id='formSubmitRegister'>Załóż konto</ButtonFunction>
                 </div> 
-         </div>
-         <div className='registerLogout'>
+            </>}
+            </div>
+         <div className='registerLogout'>{!toggled && <>
              <h1>Wylogowanie nastąpiło pomyślnie</h1>
              <img
                  src={Decoration}>
@@ -120,9 +129,11 @@ export default function login() {
                 id='formSubmitLogout'>
                 Strona główna
             </ButtonFunction>        
-          </div>
+         </> }</div>
         </div>
 </div>
       
     )
 }
+
+export default Login;
