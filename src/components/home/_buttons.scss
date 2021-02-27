@@ -83,3 +83,23 @@
         border-width: 2px;
     }
 }
+
+.buttonSend{
+    align-self: flex-end;
+    color: $colorDarkGrey;
+    font-size: 18px;
+    font-family: $fontBase;
+    font-weight: normal;
+    width: 150px;
+    height: 50px;
+    padding: 0 10px; 
+    cursor: pointer;
+    background: white;
+    border: solid 2px $colorDarkGrey;
+    margin: 10px;
+    &:hover{
+        border-color: $colorYellow;
+        border-style: solid;
+        border-width: 2px;
+    }
+}

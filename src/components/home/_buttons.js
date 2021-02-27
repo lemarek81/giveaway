@@ -2,7 +2,7 @@ import React from 'react';
 import './_buttons.scss';
 
 
-const Sizes= ['buttonBig', 'buttonMedium', 'buttonSmall', 'buttonNav'];
+const Sizes= ['buttonBig', 'buttonMedium', 'buttonSmall', 'buttonNav', 'buttonSend'];
 
 const ButtonFunction = ({
     children,

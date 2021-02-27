@@ -1,6 +1,7 @@
 import React from 'react'
 import Decoration from '../../../assets/Decoration.svg';
 import './_contactForm.scss'
+import ButtonFunction from '../_buttons.js';
 
 export default function _contactForm() {
 
@@ -23,9 +24,12 @@ export default function _contactForm() {
                             className='nameBox'
                             id='name'
                             /> 
-                        <div className='errorField'
-                        display='none'
-                        >Podane imie jest nieprawidłowe!</div>
+                    <div 
+                    className='errorField'
+                    display='none'
+                    >
+                    Podane imie jest nieprawidłowe!
+                    </div>
                     </div>
                     <div className='contactFromInputSetup'>
                         <label for="email">Wpisz swój email</label>
@@ -37,7 +41,6 @@ export default function _contactForm() {
                             id='email'/> 
                         <div 
                         className='errorField'
-                        display='none'
                         >
                         Podany e-mail jest nieprawidłowy!</div>
                     </div>
@@ -60,13 +63,13 @@ export default function _contactForm() {
                 </div>
                 </div>
             </form>
-            <button 
+            <ButtonFunction 
             type='submit'
-            className='buttonBig'
+            buttonSize='buttonSend'
             id='formSubmit'
             >
-                Wyślij
-            </button> 
+            Wyślij
+            </ButtonFunction> 
             </div>
         
     )
