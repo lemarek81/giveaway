@@ -70,3 +70,18 @@
     }
 }
 } 
+
+.pageSelector {
+
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    .currentPage {
+        color: red;
+    }
+
+    span {
+        margin: 0 10px;
+    }
+
+}

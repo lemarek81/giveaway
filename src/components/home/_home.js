@@ -1,11 +1,11 @@
 import React from 'react';
 import './_home.scss';
-import Header from './header/_header';
-import CounterThree from './counterThree/_counterThree';
-import WhatAbout from './whatAbout/_whatAbout';
-import AboutUs from './aboutUs/_aboutUs';
-import FundAndOrg from './fundAndOrg/_fundAndOrg';
-import Contact from './contact/_contact';
+import Header from './header/_header.js';
+import CounterThree from './counterThree/_counterThree.js';
+import WhatAbout from './whatAbout/_whatAbout.js';
+import AboutUs from './aboutUs/_aboutUs.js';
+import FundAndOrg from './fundAndOrg/_fundAndOrg.js';
+import ContactSection from './contact/_contact.js';
 
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
             <WhatAbout></WhatAbout>
             <AboutUs></AboutUs>
             <FundAndOrg></FundAndOrg>
-            <Contact></Contact>
+            <ContactSection></ContactSection>
         </div>
     )
 }

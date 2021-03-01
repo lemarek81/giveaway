@@ -14,7 +14,7 @@ export default class Navigation extends Component {
 
         <nav className="navbar" id="navbar">
             <div className="navContent">
-              <ul classNeme="navUl">
+              <ul className="navUl">
                 <li>
                 <Link 
                         activeClass="active"
