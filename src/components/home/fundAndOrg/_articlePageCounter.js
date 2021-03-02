@@ -1,33 +1,31 @@
 import React, { useState } from "react";
 import "./_article.scss";
 
-const pageSize = 3; 
-// źródło: https://stackoverflow.com/questions/42761068/paginate-javascript-array
-const paginate = (array, page_number) =>
-  array.slice((page_number - 1) * pageSize, page_number * pageSize);
+const pageCount = 3;
+const paginate = (array, pageNumber) =>
+  array.slice((pageNumber - 1) * pageCount , pageNumber * pageCount );
 
-export default function Paginator(props) {
+export default function ArticlePageCounter(props) {
   const [currentPage, setCurrentPage] = useState(1);
-  const pagesCount = Math.ceil(props.data.length / pageSize); 
-
+  const pagesCount = Math.ceil(props.data.length / pageCount); 
   return (
     <>
-    {paginate(props.data, currentPage).map((element) => (
+     {paginate(props.data, currentPage).map((element) => (
         <div className="articleWrapper">
           <div className="articleLeft">
             <h2 className="articleTitle">{element.title}</h2>
-            <p className="articleShortage">{elem.shortage}</p>
+            <p className="articleShortage">{element.shortage}</p>
           </div>
           <div className="articleRight">
-            <p className="articleTags">{elem.tags}</p>
+            <p className="articleTags">{element.tags}</p>
           </div>
         </div>
       ))}
-    {pagesCount > 1 ? (
+      {pagesCount > 1 ? (
         <div className="pageSelector">
-            {Array(pagesCount)
+        {Array(pagesCount)
             .fill()
-            .map((elem, index) => (
+            .map((element, index) => (
               <span
                 className={currentPage === index + 1 ? "currentPage" : ""}
                 onClick={() => setCurrentPage(index + 1)}

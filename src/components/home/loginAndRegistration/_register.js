@@ -1,6 +1,6 @@
 import React from "react";
 import "./_register.scss";
-import Navigation from "../header/_navbar";
+import Navigation from "../header/_navigation";
 import Decoration from "../../../assets/Decoration.svg";
 import ButtonFunction from "../_buttons.js";
 import "../_buttons.scss";

@@ -76,12 +76,18 @@
     text-align: center;
     margin-top: 20px;
     cursor: pointer;
+
+    
     .currentPage {
-        color: $colorYellow;
+        border: solid 2px $colorDarkGrey;
+        padding-left: 4px;
+        padding-right: 4px;
     }
 
     span {
         margin: 0 10px;
+        width: auto;
+       
     }
 
 }

@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Navigation from "./_navbar";
+import Navigation from "./_navigation";
 import Decoration from "../../../assets/Decoration.svg";
 import ButtonFunction from "../_buttons.js";
 import "../_buttons.scss";
-import "./_navbar.scss";
+import "./_navigation.scss";
 import "./_header.scss";
 
 export default function header() {

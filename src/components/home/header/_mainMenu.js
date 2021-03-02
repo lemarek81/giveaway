@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ButtonFunction from "../_buttons.js";
 import { AuthContext } from "../../../App";
+import "./_mainMenu.scss";
 
 export default function MainMenu() {
   const { isLoggedIn } = React.useContext(AuthContext);

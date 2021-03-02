@@ -3,13 +3,13 @@ import './_fundAndOrg.scss';
 import Decoration from '../../../../src/assets/Decoration.svg'
 import ArticleFund from './_articleFund';
 import ArticleOrg from './_articleOrg';
-import ArticleCollect from './_articleCollect';
+import ArticleCollect from './_articleLocals';
 
 export default function FundAndOrg() {
-  const [currentmode, setCurrentMode] = useState("fund"); 
+  const [currentView, setcurrentView] = useState("fund"); 
 
-  const getArticleMode = () => {
-    switch (currentmode) {
+  const getArticleMode = (element) => {
+    switch (currentView) {
       case "fund":
         return <ArticleFund />;
       case "org":
@@ -29,19 +29,19 @@ export default function FundAndOrg() {
         <div className="buttonWrapper">
           <button
             className="buttonMedium"
-            onClick={() => setCurrentMode("fund")}
+            onClick={(element) => setcurrentView("fund")}
           >
             Fundacjom
           </button>
           <button
             className="buttonMedium"
-            onClick={() => setCurrentMode("org")}
+            onClick={(element) => setcurrentView("org")}
           >
             Organizacjom pozarządowym
           </button>
           <button
             className="buttonMedium"
-            onClick={() => setCurrentMode("collect")}
+            onClick={(element) => setcurrentView("collect")}
           >
             Lokalnym zbiórkom
           </button>

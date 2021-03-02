@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
-import './_navbar.scss';
+import './_navigation.scss';
 import ButtonFunction from '../_buttons.js';
 
 export default class Navigation extends Component {
