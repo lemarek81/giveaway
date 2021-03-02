@@ -13,7 +13,7 @@ export default function _contactForm() {
   const [errors, setErrors] = useState([]);
   const [messageSent, setMessageSent] = useState(false);
 
-  const formSubmit = (e) => {
+  const formSubmit = (element) => {
     setMessageSent(false);
     fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
       method: "POST",
@@ -33,20 +33,23 @@ export default function _contactForm() {
         }
       });
 
-    e.preventDefault();
+    element.preventDefault();
   };
 
-  const handleChange = (e) => {
-    const { value, name } = e.target;
+  const handleChange = (element) => {
+    const { value, name } = element.target;
     setFormData({ ...formData, [name]: value });
   };
 
   return (
     <div className="contactForm">
-      <h1>Skontaktuj się z nami</h1>
+      
+      <h1>Skontaktuj się z nami<br></br></h1>
       {messageSent ? <h2>Dziękujemy za wiadomość!</h2> : null}
       <img src={Decoration}></img>
-      <form className="contactFormArea" onSubmit={formSubmit}>
+      
+      <form className="contactFormArea" 
+      onSubmit={formSubmit}>
         <div className="contactFirstRow">
           <div className="contactFromInputSetup">
             <label htmlFor="name">Wpisz swoje imię</label>

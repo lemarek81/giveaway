@@ -1,5 +1,5 @@
 import React from "react";
-import Paginator from "./_articlePages";
+import Paginator from "./Paginator";
 import "./_article.scss";
 
 export default function _article() {

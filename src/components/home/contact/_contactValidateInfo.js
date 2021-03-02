@@ -1,25 +1,27 @@
 export default function contactValidateInfo(values) {
     let errors = {};
   
-    if (!values.username.includes(" ")) {
-      errors.username = 'Username required';
+    if (!values.name){
+      errors.name = 'Podaj imię';
+    } else if (values.name.includes(" ")) {
+      errors.email = 'Imie jest niepoprawne';
     }
    
     if (!values.email) {
-      errors.email = 'Email required';
+      errors.email = 'Podaj e-mail';
     } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-      errors.email = 'Email address is invalid';
+      errors.email = 'Hasło wymagane';
     }
     if (!values.password) {
-      errors.password = 'Password is required';
+      errors.password = 'Podaj hasło';
     } else if (values.password.length < 6) {
-      errors.password = 'Password needs to be 6 characters or more';
+      errors.password = 'Hasło musi mieć co najmniej 6';
     }
   
     if (!values.password2) {
-      errors.password2 = 'Password is required';
+      errors.password2 = 'Hasło jest wymagane';
     } else if (values.password2 !== values.password) {
-      errors.password2 = 'Passwords do not match';
+      errors.password2 = 'Hasło nie pasuje';
     }
     return errors;
   }

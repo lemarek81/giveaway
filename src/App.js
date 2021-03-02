@@ -5,7 +5,7 @@ import Home from "./components/home/_home";
 import Login from "./components/home/loginAndRegistration/_login";
 import Registration from "./components/home/loginAndRegistration/_register";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import MainMenu from "../src/components/home/header/_mainMenu";
+import MainMenu from "./components/home/loginAndRegistration/_mainMenu";
 
 export const AuthContext = createContext();
 

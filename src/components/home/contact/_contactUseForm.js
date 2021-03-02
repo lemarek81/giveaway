@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const ContactUseForm = (callback, validate) => {
   const [values, setValues] = useState({
-    username: '',
+    name: '',
     email: '',
     password: '',
     password2: ''

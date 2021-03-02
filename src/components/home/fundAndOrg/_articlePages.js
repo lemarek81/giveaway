@@ -12,10 +12,10 @@ export default function Paginator(props) {
 
   return (
     <>
-    {paginate(props.data, currentPage).map((elem) => (
+    {paginate(props.data, currentPage).map((element) => (
         <div className="articleWrapper">
           <div className="articleLeft">
-            <h2 className="articleTitle">{elem.title}</h2>
+            <h2 className="articleTitle">{element.title}</h2>
             <p className="articleShortage">{elem.shortage}</p>
           </div>
           <div className="articleRight">

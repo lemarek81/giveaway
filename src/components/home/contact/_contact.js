@@ -18,7 +18,7 @@ const ContactSection = () => {
         <div className='contactSectionWrapper'>
             <div className='contactLeft'> </div>
             <div className='contactRight'>
-            {formIsSubmitted ? (
+            {!formIsSubmitted ? (
           <ContactForm checkSubmitForm={submitForm} />
         ) : (
           <ContactFormSuccess />
