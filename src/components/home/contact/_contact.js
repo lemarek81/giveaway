@@ -1,16 +1,28 @@
-import React from 'react'
+import React , {useState} from 'react'
 import './_contact.scss'
-import ContactForm from './_contactForm';
-import Footer from '../footer/_footer';
+import ContactForm from './_contactForm.js';
+import Footer from '../footer/_footer.js';
+import ContactFormSuccess from './_contactFormSuccess.js';
+import  './_contactFormSuccess.scss';
 
-export default function contact() {
+
+const ContactSection = () => {
+    const [formIsSubmitted, setFormIsSubmitted] = useState(false);
+  
+    function submitForm() {
+        setFormIsSubmitted(true);
+    }
+
     return (
         <div  className='contactSection' id='contact'>
-
         <div className='contactSectionWrapper'>
             <div className='contactLeft'> </div>
             <div className='contactRight'>
-            <ContactForm></ContactForm>   
+            {!formIsSubmitted ? (
+          <ContactForm checkSubmitForm={submitForm} />
+        ) : (
+          <ContactFormSuccess />
+        )} 
             </div>
         </div>
         <div className='contactFooter'>
@@ -20,3 +32,4 @@ export default function contact() {
     
     )
 }
+export default ContactSection;
