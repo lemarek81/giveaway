@@ -10,16 +10,16 @@ const ContactUseForm = (callback, validate) => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = e => {
-    const { name, value } = e.target;
+  const handleChange = element => {
+    const { name, value } = element.target;
     setValues({
       ...values,
       [name]: value
     });
   };
 
-  const handleSubmitFrom = e => {
-    e.preventDefault();
+  const handleSubmitFrom =  element=> {
+    element.preventDefault();
 
     setErrors(validate(values));
     setIsSubmitting(true);

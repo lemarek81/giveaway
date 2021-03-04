@@ -11,7 +11,6 @@ export const AuthContext = createContext();
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-//sprawdzić authContext //
   return (
     <div className="AppContainer">
       <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>

@@ -7,6 +7,8 @@ import "../_buttons.scss";
 import { Link } from "react-router-dom";
 
 export default function register() {
+
+  
   return (
     <div className="registerContainer">
       <div className="registerForm">
@@ -56,6 +58,15 @@ export default function register() {
             id="formSubmitRegister"
           >
             Załóż konto
+          </ButtonFunction>
+
+          <ButtonFunction
+             type="submit"
+             buttonSize="buttonSend"
+             id="formSubmitLogin"
+            //  onClick={() => setIsLoggedIn(true)}
+              >
+             Zaloguj się
           </ButtonFunction>
         </div>
       </div>
