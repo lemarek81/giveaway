@@ -1,8 +1,8 @@
 import React from "react";
-import Paginator from "./Paginator";
 import "./_article.scss";
+import ArticlePageCounter from './_articlePageCounter';
 
-export default function _article() {
+export default function Article() {
   const fundList = [
     {
       title: 'Orgnaizacja "lorem ipsum 1"',
@@ -54,7 +54,7 @@ export default function _article() {
         potrzebują.
       </span>
 
-      <Paginator data={fundList} />
+      <ArticlePageCounter data={fundList} />
     </div>
   );
 }

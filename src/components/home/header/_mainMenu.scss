@@ -1,0 +1,32 @@
+@import '../../../scss/settings/colors';
+@import '../../../scss/settings/fonts';
+@import '../../../scss/settings/mainStyles';
+
+
+
+.menuWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: space-between;
+    width: 100%;        
+    .menuTop{
+        display: flex;
+        flex-direction: row;
+        // justify-content: flex-end;
+        align-items:center;
+
+        .User{
+            color: $colorDarkGrey;
+            margin-right: 10px;
+        }
+    }
+    .menuMain{
+        display: flex;
+        width:100%;
+        flex-direction: row;
+        align-items:flex-end;
+        justify-content: space-between;
+    }
+
+}

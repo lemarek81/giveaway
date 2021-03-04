@@ -1,66 +1,41 @@
-import React from 'react';
-import './_article.scss';
+import React from "react";
+import "./_article.scss";
+import ArticlePageCounter from './_articlePageCounter';
 
-export default function _articleOrg() {
-    return (
-<div className="articleSectionOrganization">
-        <span className='articleIntro'>Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed
-        do eisumod temport incididund ut labore et dolore magna
-        aliqua. Quis nostrud exercitation.</span>
-        <div className="articleWrapper">
-            <div className="articleLeft">
-            <h2 className="articleTitle"> Orgnaizacja "lorem ipsum 1" </h2>
-            <p className="articleShortage"> Quic Varius quadam id diam vel quam elementru pulivinar</p>
-            </div>
-            <div className="articleRight">
-            <p className="articleTags">Egestat, sed, tempus</p>   
-            </div>
-        </div>
-        <div className="articleWrapper">
-            <div className="articleLeft">
-            <h2 className="articleTitle"> Orgnaizacja "lorem ipsum 1" </h2>
-            <p className="articleShortage"> Quic Varius quadam id diam vel quam elementru pulivinar</p>
-            </div>
-            <div className="articleRight">
-            <p className="articleTags">Egestat, sed, tempus</p>   
-            </div>
-        </div>
-        <div className="articleWrapper">
-            <div className="articleLeft">
-            <h2 className="articleTitle"> Orgnaizacja "lorem ipsum 1" </h2>
-            <p className="articleShortage"> Quic Varius quadam id diam vel quam elementru pulivinar</p>
-            </div>
-            <div className="articleRight">
-            <p className="articleTags">Egestat, sed, tempus</p>   
-            </div>
-        </div>
-        <div className="articleWrapper">
-            <div className="articleLeft">
-            <h2 className="articleTitle"> Orgnaizacja "lorem ipsum 1" </h2>
-            <p className="articleShortage"> Quic Varius quadam id diam vel quam elementru pulivinar</p>
-            </div>
-            <div className="articleRight">
-            <p className="articleTags">Egestat, sed, tempus</p>   
-            </div>
-        </div>
-        <div className="articleWrapper">
-            <div className="articleLeft">
-            <h2 className="articleTitle"> Orgnaizacja "lorem ipsum 1" </h2>
-            <p className="articleShortage"> Quic Varius quadam id diam vel quam elementru pulivinar</p>
-            </div>
-            <div className="articleRight">
-            <p className="articleTags">Egestat, sed, tempus</p>   
-            </div>
-        </div>
-        <div className="articleWrapper">
-            <div className="articleLeft">
-            <h2 className="articleTitle"> Orgnaizacja "lorem ipsum 1" </h2>
-            <p className="articleShortage"> Quic Varius quadam id diam vel quam elementru pulivinar</p>
-            </div>
-            <div className="articleRight">
-            <p className="articleTags">Egestat, sed, tempus</p>   
-            </div>
-        </div>
-        </div>
-    )
+export default function Article() {
+  const fundList = [
+    {
+      title: 'Orgnaizacja "lorem ipsum 1"',
+      shortage: "Quic Varius quadam id diam vel quam elementru pulivinar",
+      tags: "Egestat, sed, tempus",
+    },
+    {
+      title: 'Orgnaizacja "lorem ipsum 2"',
+      shortage: "Quic Varius quadam id diam vel quam elementru pulivinar",
+      tags: "Egestat, sed, tempus",
+    },
+    {
+      title: 'Orgnaizacja "lorem ipsum 3"',
+      shortage: "Quic Varius quadam id diam vel quam elementru pulivinar",
+      tags: "Egestat, sed, tempus",
+    },
+   
+  ];
+
+  return (
+    <div className="articleSectionFundation">
+      <span className="articleIntro">
+      Morbi ut faucibus nunc. Pellentesque quis rutrum turpis. 
+      Duis quis ante sit amet dui rhoncus mattis. Etiam ac mi neque. 
+      Curabitur eu lectus quis ipsum euismod egestas. 
+      Morbi vitae nunc in turpis tempor finibus et et purus. 
+      Ut metus leo, accumsan et porttitor ac, pharetra a sem. Vivamus malesuada non magna ac interdum. 
+      Sed velit lectus, placerat ac posuere sed, hendrerit eget magna. 
+      Proin elit mi, finibus non maximus vitae, bibendum id lorem. 
+      Aliquam vitae dapibus arcu. 
+      </span>
+
+      <ArticlePageCounter data={fundList} />
+    </div>
+  );
 }

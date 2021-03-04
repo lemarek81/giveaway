@@ -1,15 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import "./_register.scss";
 import Decoration from "../../../assets/Decoration.svg";
 import ButtonFunction from "../_buttons.js";
 import "../_buttons.scss";
 import { AuthContext } from "../../../App";
 
+
 export default function Login() {
   const { isLoggedIn, setIsLoggedIn } = React.useContext(AuthContext);
+  const [textIsLoggedIn, setTextIsLoggedIn] = useState(false);
+  
+    function showLogout() {
+      setTextIsLoggedIn(true);
+    };
+
 
   return (
-    <div className="registerContainer">
+    <div className="registerContainer" >
       <div>
         <div className="registerForm">
           <h1>Załóż konto</h1>
@@ -57,24 +64,41 @@ export default function Login() {
                 type="submit"
                 buttonSize="buttonSend"
                 id="formSubmitLogin"
-                onClick={() => setIsLoggedIn(true)}
+                onClick={() => setIsLoggedIn(true)} 
               >
                 Zaloguj się
               </ButtonFunction>
             )}
-          </div>
-        </div>
-        <div className="registerLogout">
-          {isLoggedIn ? null : <h1>Wylogowanie nastąpiło pomyślnie</h1>}
-          <img src={Decoration}></img>
-          <ButtonFunction
+
+            <ButtonFunction
             type="submit"
             buttonSize="buttonSend"
-            id="formSubmitLogout"
-          >
-            Strona główna
-          </ButtonFunction>
+            id="formSubmitRegister"
+            >
+            Załóż konto
+            </ButtonFunction>
+          </div>
         </div>
+        <>
+        {textIsLoggedIn? 
+        (setIsLoggedIn(true)) : (  
+        <div className="registerLogout" checkShowLogout={showLogout}> 
+        {isLoggedIn ? null : (
+            <>
+            <h1>Wylogowanie nastąpiło pomyślnie</h1>
+            <img src={Decoration}></img>
+            <ButtonFunction
+              type="submit"
+              buttonSize="buttonSend"
+              id="formSubmitLogout"
+            >
+              Strona główna
+            </ButtonFunction>
+          </>
+       )}
+      </div>
+      )}
+        </>
       </div>
     </div>
   );
